@@ -10,7 +10,7 @@ header {
     background-color: red;
 }
 
-nav a {
+nav div.a {
     background-color: aqua;
     display: inline-block;
     padding: 4px 8px; /* Adjust as needed */
