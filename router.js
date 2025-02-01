@@ -28,6 +28,7 @@ function Router ({routes, mainEntryPoint}){
    const ROUTER_ATTRIBUTE_NAME = 'NAVIGATE_TO';
    const EVENT_URL_CHANGE = 'urlChange';
    const ORIGIN_PATHNAME = location.pathname;
+   console.log( location.origin)
 
    async function handleinitialLoad(){
       

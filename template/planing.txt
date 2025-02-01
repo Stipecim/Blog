@@ -1,0 +1,46 @@
+When I enter appication it will have header containing home,
+posts, about.
+
+- Home page will contain introduction.
+- Posts will contain posts but firstly it will need to
+  fetch from database posts than display them, possible
+  implementation of pagination.
+- About will contain general information such as blog
+  and a person.
+
+
+Underlying System.
+Every page will be an individual page and wont interact
+with other pages; like its own ecosystem. This means 
+that every page will have its script files and css files.
+Routing systems will be introduced to manage routing and
+loading pages with its external(css/script)/internal
+contents.
+
+
+Router functionality.
+Functionality of a router should be primarily focused on
+loading internal html links, every time new page is loaded.
+Router should be independant, for reusability. 
+
+    Problem:
+        What is up with those pages that are within the 
+        database, how should router get to them?
+    Solution:
+        We will have to incorporate some sort of awareness 
+        where it will fetch data from database and apply 
+        data to template.
+
+When loading another component(html) wait until loads then load page ? 
+
+> loading internal html links, every time new page is loaded.
+load initial page
+attach event listener to every link on that page
+with router attribute. 
+
+>loading page with script
+map router links 
+
+
+
+
