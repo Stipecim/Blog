@@ -1,4 +1,4 @@
-import createException from "./createException";
+import createException from "./createException.js";
 
 
 const exception = createException('GetHTMLContent');
@@ -9,7 +9,7 @@ const parseDom = async (FILE_PATH) => {
     const parser = new DOMParser();
     const newDocument = parser.parseFromString(text, 'text/html');
 
-    return newDocument;
+    return newDocument.body;
 }
 
 const getHtmlAsText = async (FILE_PATH) => {
@@ -30,7 +30,7 @@ const getHtmlAsText = async (FILE_PATH) => {
  * @returns {Promise<string|Document>} The function returns either HTML text or a parsed DOM based on the specified mode.
  */
 const getHtmlContent = async (path, mode) => {
-    if(!mode) throw exception('Mode is not specified');
+    if(!mode) throw exception.message('Mode is not specified');
 
 
     const FILE_PATH = `${location.origin}${path.startsWith('/') ? path : `/${path}`}`; 
